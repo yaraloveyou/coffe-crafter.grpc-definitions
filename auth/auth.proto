@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package auth;
+
+option go_package = "coffe-crafter.grpc-auth";
+
+service AuthService {
+    rpc Authenticate (AuthRequest) returns (AuthResponse);
+    rpc Registration (RegRequest) returns (RegResponse);
+}
+
+message AuthRequest {
+    string email = 1;
+    string password = 2;
+}
+
+message AuthResponse {
+    bool success = 1;
+}
+
+message RegRequest {
+    string email = 1;
+    string password = 2;
+    string username = 3;
+}
+
+message RegResponse {
+    bool succes = 1;
+}
