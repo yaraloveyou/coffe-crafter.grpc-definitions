@@ -25,5 +25,5 @@ message RegRequest {
 }
 
 message RegResponse {
-    bool succes = 1;
+    bool success = 1;
 }
